@@ -1,7 +1,8 @@
 <?php
-
+use Exception;
 namespace MyNamespace;
-class Exception extends \Exception {}
+
+
 
 echo "test";
 
