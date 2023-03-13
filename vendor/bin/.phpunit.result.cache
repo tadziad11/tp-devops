@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"TestMathOperations::testAdd":0.18,"TestMathOperations::testSubtract":0,"TestMathOperations::testMultiply":0,"TestMathOperations::testDivide":0.02}}
+{"version":1,"defects":{"TestMathOperations::testAdd":4,"TestMathOperations::testSubtract":4,"TestMathOperations::testMultiply":4,"TestMathOperations::testDivide":4},"times":{"TestMathOperations::testAdd":0.003,"TestMathOperations::testSubtract":0,"TestMathOperations::testMultiply":0,"TestMathOperations::testDivide":0}}
