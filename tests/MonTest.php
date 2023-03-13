@@ -1,8 +1,10 @@
 <?php
 
 require_once('index.php');
-
+namespace MyNamespace\Tests;
+require_once('vendor/autoload.php');
 use PHPUnit\Framework\TestCase;
+use MyNamespace\MathOperations;
 
 class TestMathOperations extends TestCase {
     

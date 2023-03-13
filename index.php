@@ -1,5 +1,6 @@
 <?php
 
+namespace MyNamespace;
 
 echo "test";
 class MathOperations
