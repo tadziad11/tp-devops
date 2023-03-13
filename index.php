@@ -1,7 +1,7 @@
 <?php
+namespace MyNamespace;
 
 require_once('Exception.php');
-namespace MyNamespace;
 
 echo "test";
 
