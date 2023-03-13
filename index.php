@@ -1,8 +1,10 @@
 <?php
 
 namespace MyNamespace;
+class Exception extends \Exception {}
 
 echo "test";
+
 class MathOperations
 {
     
