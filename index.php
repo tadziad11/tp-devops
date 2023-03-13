@@ -1,8 +1,5 @@
 <?php
-use Exception;
 namespace MyNamespace;
-
-
 
 echo "test";
 
