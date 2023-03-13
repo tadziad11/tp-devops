@@ -4,7 +4,7 @@ require_once('index.php');
 require_once('vendor/autoload.php');
 use PHPUnit\Framework\TestCase;
 use MyNamespace\MathOperations;
-use Exception;
+use MyNamespace\Exception;
 
 
 class TestMathOperations extends TestCase {

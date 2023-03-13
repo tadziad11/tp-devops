@@ -1,4 +1,6 @@
 <?php
+
+require_once('Exception.php');
 namespace MyNamespace;
 
 echo "test";
