@@ -1,0 +1,45 @@
+# PHP
+# Test and package your PHP project.
+# Add steps that run tests, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/php
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  phpVersion: 8.2.3
+  #slackUrl : 'https://hooks.slack.com/services/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'
+
+
+jobs:
+- job: GIGD_TP
+  timeoutInMinutes: 1
+  steps:
+  - script: |
+      sudo update-alternatives --set php /usr/bin/php$(phpVersion)
+      sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
+      sudo update-alternatives --set phpdbg /usr/bin/phpdbg$(phpVersion)
+      sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
+      sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
+      php -version
+    displayName: 'Use PHP version $(phpVersion)'
+  
+  - script: composer install --no-interaction --prefer-dist
+    displayName: 'composer install'
+
+  - script: |
+      composer install
+    displayName: 'Install dependencies'
+  
+  - script: |
+      chmod +x vendor/bin/phpcs
+          vendor/bin/phpcs --standard=PSR2 --warning-severity=0 index.php
+    displayName: 'Run PHP CodeSniffer'
+
+  - script: |
+      chmod +x vendor/bin/phpunit
+      vendor/bin/phpunit tests
+    displayName: 'Run PHPUnit tests'
