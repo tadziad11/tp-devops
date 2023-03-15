@@ -46,5 +46,5 @@ jobs:
     displayName: 'Run PHPUnit tests'
 
   - script: | 
-     curl -H "Content-Type: application/json" -d '{"title": "Pipeline azure CI/CD", "text": "Le pipeline a ete execute avec succes"}' https://hooks.slack.com/services/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
+     curl -H "Content-Type: application/json" -d '{"title": "Pipeline azure CI/CD", "text": "Le pipeline a ete execute avec succes"}' https://hooks.slack.com/services/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
     displayName: 'Send message to Slack'
